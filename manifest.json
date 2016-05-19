@@ -1,14 +1,13 @@
 {
   "name": "AlreadyReddit",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
-  "description": "Previously viewed are grey.",
-  // "browser_action": {"default_icon": "icon.png"},
+  "description": "Previously viewed comments are colored gray.",
   "permissions": ["history","tabs"],
   "content_scripts": [
       {
           "run_at": "document_end",
-          "matches": ["http://www.reddit.com/*/comments/*"],
+          "matches": ["*://www.reddit.com/r/*/comments/*"],
           "js": ["jquery-2.1.3.min.js", "already_content.js"]
       }
   ],
